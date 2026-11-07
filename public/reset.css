@@ -1,0 +1,53 @@
+@layer resets {
+    *, *::before, *::after {
+        box-sizing: border-box;
+    }
+
+    *:not(:where(dialog, [popover])) {
+        margin: 0;
+    }
+
+    html {
+        -moz-text-size-adjust: none;
+        -webkit-text-size-adjust: none;
+        text-size-adjust: none;
+    }
+
+    body {
+        min-height: 100svh;
+        line-height: 1.5;
+        -webkit-font-smoothing: antialiased;
+    }
+
+    h1, h2, h3, h4, h5, h6,
+    p, li, figcaption {
+        overflow-wrap: break-word;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        text-wrap: balance;
+    }
+
+    p, li, figcaption {
+        text-wrap: pretty;
+    }
+
+    img, picture, video, canvas, svg {
+        display: block;
+        max-width: 100%;
+    }
+
+    input, button, textarea, select {
+        font: inherit;
+    }
+
+    :target {
+        scroll-margin-block: 5ex;
+    }
+
+    @media (prefers-reduced-motion: no-preference) {
+        html {
+            interpolate-size: allow-keywords;
+        }
+    }
+}
